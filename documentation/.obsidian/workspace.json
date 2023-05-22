@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Readme.md",
+                "file": "Boss guide goals/Readme.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Readme.md",
+                "file": "Boss guide goals/Readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Readme.md",
+                "file": "Boss guide goals/Readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Readme.md"
+                "file": "Boss guide goals/Readme.md"
               }
             }
           }
@@ -148,7 +148,10 @@
   },
   "active": "48589a973dd7e8f1",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Boss guide goals/Readme.md",
     "Readme.md",
+    "Boss guide goals",
     "().md"
   ]
 }
