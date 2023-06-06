@@ -1,11 +1,51 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-generator client {
-  provider = "prisma-client-js"
-}
-
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Dodge {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String
+  attack    Attack   @relation(fields: [attackId], references: [id])
+  attackId  Int
+  imageUrl  String?
+  videoUrl  String?
+}
+
+model Attack {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String
+  damage    Int
+  boss      Boss     @relation(fields: [bossId], references: [id])
+  bossId    Int
+  dodges    Dodge[]
+  imageUrl  String?
+  videoUrl  String?
+}
+
+model Boss {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String
+  description String
+  health      Int[]
+  attacks     Attack[]
+  smallImage  String?
+  largeImage  String?
+}
+
+generator client {
+  provider = "prisma-client-js"
 }

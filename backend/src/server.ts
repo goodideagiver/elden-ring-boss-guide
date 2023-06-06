@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 const app = express()
-const PORT = 3000
+const PORT = 7878
 
 app.get('/', async (req: Request, res: Response) => {
   const users = await prisma.user.findMany()
